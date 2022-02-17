@@ -10,3 +10,13 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
   background-color: mat.get-color-from-palette(mat.$grey-palette, 50);
 }
+
+.small-card {
+  width: 320px;
+}
+
+.wide-card {
+  width: 100%;
+  max-width: 800px;
+  margin: 64px auto 0;
+}

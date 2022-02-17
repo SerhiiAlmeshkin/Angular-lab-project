@@ -1,16 +1,16 @@
-<mat-card>
+<mat-card class="small-card">
   <mat-card-title>Sign In</mat-card-title>
   <mat-card-content>
     <form id="loginForm" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
       <mat-form-field appearance="outline">
         <mat-label>Email</mat-label>
-        <input matInput formControlName="email" required>
+        <input matInput type="email" formControlName="email" required>
         <mat-error *ngIf="loginForm.get('email')?.hasError('required')">Email is required</mat-error>
         <mat-error *ngIf="loginForm.get('email')?.hasError('email')">Email is invalid</mat-error>
       </mat-form-field>
       <mat-form-field appearance="outline">
         <mat-label>Password</mat-label>
-        <input matInput formControlName="password" required>
+        <input matInput type="password" formControlName="password" required>
         <mat-error *ngIf="loginForm.get('password')?.hasError('required')">Password is required</mat-error>
       </mat-form-field>
     </form>

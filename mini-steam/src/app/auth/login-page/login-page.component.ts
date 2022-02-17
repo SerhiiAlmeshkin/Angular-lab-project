@@ -1,5 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login-page',
@@ -9,7 +10,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class LoginPageComponent implements OnInit {
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private authService: AuthService) { }
 
   loginForm = this.fb.group({
     email: ['', [Validators.required, Validators.email]],
@@ -19,7 +20,8 @@ export class LoginPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit() {
-    console.log(this.loginForm.value)
+  async onSubmit() {
+    const { email, password } = this.loginForm.value
+    await this.authService.login(email, password)
   }
 }

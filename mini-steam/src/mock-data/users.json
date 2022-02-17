@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "email": "admin@gmail.com",
+    "password": "123",
+    "username": "admin",
+    "age": 60,
+    "friends": [2]
+  },
+  {
+    "id": 2,
+    "email": "user@gmail.com",
+    "password": "1234",
+    "username": "user",
+    "age": 30,
+    "friends": [1]
+  }
+]

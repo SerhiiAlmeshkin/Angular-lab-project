@@ -37,7 +37,7 @@
       </mat-drawer>
       <mat-drawer-content class="featured-games">
         <div class="grid-container">
-            <mat-card *ngFor="let game of games" class="game-card">
+            <mat-card *ngFor="let game of games$ | async" class="game-card">
               <mat-card-title-group>
                 <div class="game-card__title-container">
                   <mat-card-title class="game-card__title">{{game.name}}</mat-card-title>

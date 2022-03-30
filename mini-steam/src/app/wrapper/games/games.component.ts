@@ -15,7 +15,7 @@ import { UserService } from '../../services/user.service';
 })
 export class GamesComponent implements OnInit {
   tags: Set<string>;
-  games: Game[] = [];
+  games$ = new BehaviorSubject<Game[]>([]);
   form: FormGroup;
   maximumPrice: number;
   sliderValue$ = new BehaviorSubject<number | 'Any'>(0);
@@ -46,7 +46,7 @@ export class GamesComponent implements OnInit {
       slider: this.maximumPrice
     }))
       .subscribe(({ searchField, slider, categories }) => {
-        this.games = this.gamesService.searchGames(searchField, slider, categories);
+        this.games$.next(this.gamesService.searchGames(searchField, slider, categories));
       });
 
     this.userService.currentUser$.subscribe((user) => {
@@ -54,8 +54,8 @@ export class GamesComponent implements OnInit {
         return;
       }
 
-      this.games = this.games.filter(game => !this.gamesService.getGamesInLibrary()
-        .includes(game));
+      this.games$.next(this.games$.value.filter(game => !this.gamesService.getGamesInLibrary()
+          .includes(game)));
     });
   }
 

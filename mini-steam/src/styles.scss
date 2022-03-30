@@ -13,10 +13,24 @@ body {
 
 .small-card {
   width: 320px;
+  &__title {
+    margin: 0 auto;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+  &__action-container {
+    display: flex;
+    justify-content: center;
+  }
 }
 
-.wide-card {
+mat-card.wide-card {
+  min-height: 50vh;
   width: 100%;
-  max-width: 800px;
-  margin: 64px auto 0;
+  max-width: 1200px;
+  margin: 120px auto 0;
+  padding: 20px 60px;
+  box-sizing: border-box;
 }

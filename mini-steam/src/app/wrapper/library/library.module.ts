@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LibraryComponent } from "./library.component";
+import {MatCardModule} from "@angular/material/card";
+import {MatGridListModule} from "@angular/material/grid-list";
+import {MatButtonModule} from "@angular/material/button";
 
 
 
@@ -9,7 +12,10 @@ import { LibraryComponent } from "./library.component";
     LibraryComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatCardModule,
+    MatGridListModule,
+    MatButtonModule
   ]
 })
 

@@ -1,6 +1,8 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import {FormBuilder, Validators} from "@angular/forms";
-import { AuthService } from '../../auth/services/auth.service';
+import { FormBuilder, Validators } from '@angular/forms';
+import { UserService } from '../../services/user.service';
+import {User} from "../../services/mock-data/users-mock-data.service";
+
 
 @Component({
   templateUrl: './profile-page.component.html',
@@ -9,27 +11,39 @@ import { AuthService } from '../../auth/services/auth.service';
 })
 export class ProfilePageComponent implements OnInit {
 
-  constructor(private fb: FormBuilder, private authService: AuthService) { }
+  constructor(private fb: FormBuilder, private userService: UserService) { }
 
   profileForm = this.fb.group({
     username: ['', [Validators.max(32), Validators.min(2)]],
     email: ['', [Validators.required, Validators.email]],
-    age: ['', [Validators.pattern(/^\d+$/g)]]
+    age: ['']
   });
 
   ngOnInit(): void {
-    if (this.authService.loggedInUser) {
-      const {username, email, age} = this.authService.loggedInUser
-        this.profileForm.setValue({
-          username,
-          email,
-          age
-        })
-    }
+    this.userService.currentUser$.subscribe(user => {
+      if (!user) {
+        return;
+      }
+      const { username, email, age } = user
+      this.profileForm.setValue({
+        username,
+        email,
+        age
+      })
+    });
   }
 
   onSubmit() {
-    console.log(this.profileForm.value)
+    if(!this.userService.currentUser$.value) {
+      return
+    }
+    const updatedCurrentUser: User = {
+      ...this.userService.currentUser$.value,
+      username : this.profileForm.value.username as string,
+      email : this.profileForm.value.email as string,
+      age : this.profileForm.value.age as number
+    }
+    this.userService.setCurrentUser(updatedCurrentUser)
   }
 
 }

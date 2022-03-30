@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Indie Game",
+    "price": 200,
+    "description": "Hell’s armies have invaded Earth. Become the Slayer in an epic single-player campaign to conquer demons across dimensions and stop the final destruction of humanity. The only thing they fear... is you.",
+    "tags": ["Indie"]
+  },
+  {
+    "id": 2,
+    "name": "Action Game",
+    "price": 300,
+    "description": "Hell’s armies have invaded Earth. Become the Slayer in an epic single-player campaign to conquer demons across dimensions and stop the final destruction of humanity. The only thing they fear... is you.",
+    "tags": ["Action"]
+  },
+  {
+    "id": 3,
+    "name": "Adventure Game",
+    "price": 400,
+    "description": "Hell’s armies have invaded Earth. Become the Slayer in an epic single-player campaign to conquer demons across dimensions and stop the final destruction of humanity. The only thing they fear... is you.",
+    "tags": ["Adventure"]
+  },
+  {
+    "id": 4,
+    "name": "Indie Action Game",
+    "price": 500,
+    "description": "Hell’s armies have invaded Earth. Become the Slayer in an epic single-player campaign to conquer demons across dimensions and stop the final destruction of humanity. The only thing they fear... is you.",
+    "tags": ["Indie", "Action"]
+  },
+  {
+    "id": 5,
+    "name": " Indie Adventure Game",
+    "price": 1000,
+    "description": "Hell’s armies have invaded Earth. Become the Slayer in an epic single-player campaign to conquer demons across dimensions and stop the final destruction of humanity. The only thing they fear... is you.",
+    "tags": ["Indie", "Adventure"]
+  },
+  {
+    "id": 6,
+    "name": "Indie Game2",
+    "price": 200,
+    "description": "Hell’s armies have invaded Earth. Become the Slayer in an epic single-player campaign to conquer demons across dimensions and stop the final destruction of humanity. The only thing they fear... is you.",
+    "tags": ["Indie"]
+  },
+  {
+    "id": 7,
+    "name": "Action Game2",
+    "price": 300,
+    "description": "Hell’s armies have invaded Earth. Become the Slayer in an epic single-player campaign to conquer demons across dimensions and stop the final destruction of humanity. The only thing they fear... is you.",
+    "tags": ["Action"]
+  },
+  {
+    "id": 8,
+    "name": "Adventure Game2",
+    "price": 400,
+    "description": "Hell’s armies have invaded Earth. Become the Slayer in an epic single-player campaign to conquer demons across dimensions and stop the final destruction of humanity. The only thing they fear... is you.",
+    "tags": ["Adventure"]
+  },
+  {
+    "id": 9,
+    "name": "Indie Action Game3",
+    "price": 500,
+    "description": "Hell’s armies have invaded Earth. Become the Slayer in an epic single-player campaign to conquer demons across dimensions and stop the final destruction of humanity. The only thing they fear... is you.",
+    "tags": ["Indie", "Action"]
+  },
+  {
+    "id": 10,
+    "name": " Indie Adventure Game4",
+    "price": 1000,
+    "description": "Hell’s armies have invaded Earth. Become the Slayer in an epic single-player campaign to conquer demons across dimensions and stop the final destruction of humanity. The only thing they fear... is you.",
+    "tags": ["Indie", "Adventure"]
+  }
+]

@@ -3,7 +3,7 @@ export const createCookie = (cookie: Cookie) => {
   document.cookie = `${name}=${value}; max-age=${maxAgeInSec}`
 }
 
-export const getCookie = (cookieName: string): string | null => {
+export const getCookie = (cookieName: string): number | null => {
   const cookieData = document.cookie
     .split('; ')
     .find((row) => row.startsWith(`${cookieName}=`))
@@ -16,6 +16,6 @@ export const getCookie = (cookieName: string): string | null => {
 
 export interface Cookie {
   name: string;
-  value: string;
+  value: number;
   maxAgeInSec: string;
 }

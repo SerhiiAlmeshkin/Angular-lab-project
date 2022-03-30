@@ -1,4 +1,8 @@
-import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { GamesService } from '../../services/games.service';
+import { UserService } from '../../services/user.service';
+import { Game } from '../../services/mock-data/games-mock-data.service';
+
 
 @Component({
   selector: 'app-library',
@@ -7,11 +11,18 @@ import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LibraryComponent implements OnInit {
+  gamesInLibrary: Game[];
 
-  constructor() { }
 
-  ngOnInit(): void {
+  constructor(
+    private userService: UserService,
+    private gamesService: GamesService
+  ) {
+    this.gamesInLibrary = this.gamesService.getGamesInLibrary();
   }
+
+
+  ngOnInit(): void {}
 
 }
 

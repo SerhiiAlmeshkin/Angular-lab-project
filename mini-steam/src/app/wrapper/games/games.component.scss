@@ -1,0 +1,63 @@
+:host {
+  display: block;
+  flex: 1;
+}
+
+mat-form-field.gamesSearch {
+  width: 100%;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(272px, 1fr));
+  gap: 10px;
+}
+.featured-games {
+  background-color: #424242;
+}
+.game-card {
+  height: fit-content;
+  &__title-container {
+    height: 150px;
+    width: 100%;
+    background-color: cadetblue;
+    position: relative;
+  }
+  &__title {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+  }
+  &__price {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    margin-bottom: 0;
+  }
+  &__description {
+    padding-top: 16px;
+  }
+  &__button {
+    width: 100%;
+  }
+}
+
+.slider {
+  width: 100%;
+}
+
+.games-content {
+  min-height: 50vh;
+  background-color: #424242;
+}
+
+.slider-label {
+  margin: 0 auto;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}

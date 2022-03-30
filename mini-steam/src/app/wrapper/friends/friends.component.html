@@ -2,10 +2,35 @@
   <mat-card-title>Friends</mat-card-title>
   <mat-card-content>
     <form id="profileForm">
-      <mat-form-field appearance="outline">
+      <mat-form-field appearance="outline" class="profileSearch">
         <mat-label>Search</mat-label>
-        <input matInput type="search">
+        <label for="searchFriend"></label>
+        <input matInput id="searchFriend" type="search" [formControl]="searchField">
       </mat-form-field>
     </form>
+    <div *ngIf="searchField.value === ''">
+      <h2>My friends</h2>
+      <mat-card *ngFor="let friend of currentUserFriends" class="friend-card">
+        {{friend.username || friend.email}}
+        <button mat-raised-button color="primary"
+                (click)="removeFriend(friend.id)">Remove friend
+        </button>
+      </mat-card>
+    </div>
+    <div *ngIf="searchField.value">
+      <h2>Search Friends: {{searchField.value}}</h2>
+      <mat-card *ngFor="let user of foundUsers" class="friend-card">
+        {{user.username || user.email}}
+        <button *ngIf="!user.isFriend" mat-raised-button color="accent"
+                (click)="addFriend(user.id)">Add friend
+        </button>
+        <button *ngIf="user.isFriend" mat-raised-button color="primary"
+                (click)="removeFriend(user.id)">Remove friend
+        </button>
+      </mat-card>
+    </div>
+
   </mat-card-content>
 </mat-card>
+
+

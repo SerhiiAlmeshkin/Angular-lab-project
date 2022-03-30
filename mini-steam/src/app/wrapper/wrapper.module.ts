@@ -6,6 +6,8 @@ import { FriendsModule } from './friends/friends.module';
 import { ProfileModule } from './profile/profile.module';
 import { WrapperRoutingModule } from './wrapper-routing.module';
 import { WrapperComponent } from './wrapper.component';
+import {GamesModule} from "./games/games.module";
+import {LibraryModule} from "./library/library.module";
 
 
 
@@ -19,7 +21,9 @@ import { WrapperComponent } from './wrapper.component';
     MatToolbarModule,
     MatButtonModule,
     ProfileModule,
-    FriendsModule
+    FriendsModule,
+    GamesModule,
+    LibraryModule
   ]
 })
 export class WrapperModule { }

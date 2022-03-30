@@ -1,0 +1,26 @@
+<mat-card class="wide-card">
+  <mat-card-title>My Games</mat-card-title>
+  <mat-card-content>
+
+    <div class="grid-container">
+      <mat-card *ngFor="let game of gamesInLibrary" class="game-card">
+        <mat-card-title-group>
+          <div class="game-card__title-container">
+            <mat-card-title class="game-card__title">{{game.name}}</mat-card-title>
+            <mat-card-subtitle class="game-card__price">{{game.price}} UAH</mat-card-subtitle>
+          </div>
+        </mat-card-title-group>
+        <mat-card-content>
+          <p class="game-card__description">
+            {{game.description}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions class="game-card__button-container">
+          <button mat-button class="game-card__button">Download</button>
+          <button mat-button class="game-card__button">Share</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+  </mat-card-content>
+</mat-card>

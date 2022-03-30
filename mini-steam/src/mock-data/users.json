@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "email": "admin@gmail.com",
+    "password": "123",
+    "username": "admin",
+    "age": 60,
+    "friends": [2, 3, 4],
+    "games": [8, 9, 10]
+  },
+  {
+    "id": 2,
+    "email": "user@gmail.com",
+    "password": "1234",
+    "age": 30,
+    "friends": [1, 5, 6],
+    "games": [1, 2, 3]
+  },
+  {
+    "id": 3,
+    "email": "newuser@gmail.com",
+    "password": "1234",
+    "age": 30,
+    "friends": [1],
+    "games": [1, 2, 3]
+  },
+  {
+    "id": 4,
+    "email": "hero@gmail.com",
+    "password": "1234",
+    "friends": [1],
+    "games": [1, 2, 3]
+  },
+  {
+    "id": 5,
+    "email": "new@gmail.com",
+    "password": "1234",
+    "username": "NotAFriend",
+    "friends": [2],
+    "games": [1, 2, 3]
+  },
+  {
+    "id": 6,
+    "email": "mymail@gmail.com",
+    "password": "1234",
+    "username": "NotAFriend2",
+    "friends": [2],
+    "games": [1, 2, 3]
+  },
+  {
+    "id": 7,
+    "email": "new@gmail.com",
+    "password": "1234",
+    "username": "NotAFriendUser",
+    "friends": [2],
+    "games": [1, 2, 3]
+  },
+  {
+    "id": 8,
+    "email": "mymail@gmail.com",
+    "password": "1234",
+    "username": "NotAFriend2User2",
+    "friends": [2],
+    "games": [1, 2, 3]
+  }
+]
